@@ -1,0 +1,130 @@
+/* Estilos Base y Tipografía */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f1;
+    color: #2b2b2b;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #1b4332;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    display: block;
+}
+
+.logo-sub {
+    font-size: 0.85rem;
+    color: #b7e4c7;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Banner Principal */
+.hero {
+    background-color: #2d6a4f;
+    color: white;
+    text-align: center;
+    padding: 2.5rem 1rem;
+}
+
+.eslogan {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #d8f3dc;
+}
+
+.badge {
+    background-color: #52b788;
+    color: #081c15;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* Diseños de Secciones */
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+    color: #1b4332;
+    border-bottom: 2px solid #d8f3dc;
+    padding-bottom: 8px;
+    margin-top: 0;
+}
+
+/* Grillas para Viabilidad y Equipo */
+.viabilidad-grid, .equipo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.v-item, .miembro {
+    background: #f8f9fa;
+    padding: 15px;
+    border-left: 4px solid #2d6a4f;
+    border-radius: 4px;
+}
+
+.rol {
+    font-weight: bold;
+    color: #2d6a4f;
+}
+
+/* Línea de Tiempo para la Bitácora */
+.timeline-item {
+    padding: 10px 0 10px 15px;
+    border-left: 3px solid #52b788;
+    margin-bottom: 15px;
+}
+
+.fecha {
+    font-size: 0.85rem;
+    color: #52b788;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #1b4332;
+    color: white;
+    font-size: 0.85rem;
+}

@@ -1,130 +1,233 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VILI - Sitio Web de Seguimiento</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VILI - Viaje Interactivo al Lenguaje | Sitio Web de Seguimiento</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Encabezado y Navegación -->
-    <header>
-        <div class="logo">
-            <span class="logo-title">VILI</span>
-            <span class="logo-sub">Guaraní Interactivo</span>
+  <!-- Encabezado Principal / Hero Section -->
+  <header class="hero">
+    <div class="hero-container">
+      <span class="badge">1ro BATIN - Informática</span>
+      <h1 class="logo">VILI</h1>
+      <p class="meaning"><strong>V</strong>iaje <strong>I</strong>nteractivo al <strong>L</strong>enguaje <strong>I</strong>diomático</p>
+      <p class="hero-desc">
+        Plataforma digital interactiva para la enseñanza y difusión del idioma guaraní mediante lecciones dinámicas, audio nativo y gamificación.
+      </p>
+      <div class="hero-btns">
+        <a href="#problema" class="btn btn-primary">Ver Evidencia y Problema</a>
+        <a href="#viabilidad" class="btn btn-secondary">Viabilidad del Proyecto</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navegación -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-brand">VILI</a>
+      <ul class="nav-links">
+        <li><a href="#significado">¿Qué es VILI?</a></li>
+        <li><a href="#problema">Problema y Encuesta</a></li>
+        <li><a href="#objetivos">Objetivos</a></li>
+        <li><a href="#viabilidad">Viabilidad</a></li>
+        <li><a href="#equipo">Equipo (Etapa 1)</a></li>
+        <li><a href="#bitacora">Bitácora</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Sección Significado -->
+  <section id="significado" class="section">
+    <div class="container">
+      <h2 class="section-title">¿Qué significa VILI?</h2>
+      <div class="card card-highlight">
+        <p class="lead">
+          <strong>VILI</strong> surge de la sigla de <strong>Viaje Interactivo al Lenguaje Idiomático</strong>, representando una experiencia de aprendizaje progresivo y accesible diseñado para conectar a los usuarios con la riqueza lingüística del idioma guaraní mediante herramientas tecnológicas modernas.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Problema y Resultados de la Encuesta -->
+  <section id="problema" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">Problema y Evidencia de Campo</h2>
+      
+      <p class="section-desc">
+        El proyecto surge de un problema o necesidad identificada en nuestro entorno cercano, tanto institucional como comunitario. En Paraguay el guaraní es uno de los dos idiomas oficiales y forma parte de nuestra identidad cultural. Sin embargo, detectamos que en nuestro entorno existen dificultades para hablarlo correctamente, se entiende poco o se siente vergüenza al usarlo. Esto se debe en gran parte a la falta de materiales modernos, accesibles y prácticos que se adapten a la forma en que hoy aprendemos: desde el celular y en ratos cortos.
+      </p>
+
+      <p class="section-desc">
+        Para fundamentar y respaldar con datos reales esta problemática, realizamos una encuesta de diagnóstico en la comunidad evaluando a un total de <strong>30 personas encuestadas</strong>, obteniendo los siguientes hallazgos principales:
+      </p>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-number">66.7%</span>
+          <span class="stat-label">Dificultad con el Idioma</span>
+          <p class="stat-detail">
+            El <strong>66.7%</strong> de las personas encuestadas manifestó tener dificultades para hablar o entender el idioma guaraní (dividiéndose en 33.3% con "Un poco" de dificultad y 33.3% con "Mucha dificultad").
+          </p>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#acerca">Acerca del Proyecto</a></li>
-                <li><a href="#viabilidad">Viabilidad</a></li>
-                <li><a href="#bitacora">Bitácora</a></li>
-                <li><a href="#equipo">Equipo</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <!-- 1. Sección Inicio -->
-    <section id="inicio" class="hero">
-        <h1>Proyecto VILI</h1>
-        <p class="eslogan">"Conectando generaciones a través de la tecnología y la lengua guaraní"</p>
-        <div class="estado-box">
-            <span class="estado-label">Estado del proyecto:</span>
-            <span class="badge">Etapa 1 de 3: Anteproyecto y Validación</span>
+        <div class="stat-card">
+          <span class="stat-number">44.4%</span>
+          <span class="stat-label">Desafío en la Pronunciación</span>
+          <p class="stat-detail">
+            El obstáculo principal identificado por el <strong>44.4%</strong> de los participantes es la <strong>pronunciación de sonidos nasales y guturales</strong>, seguido por la falta de vocabulario cotidiano (33.3%).
+          </p>
         </div>
-    </section>
 
-    <main>
-        <!-- 2. Sección Acerca del Proyecto -->
-        <section id="acerca" class="card">
-            <h2>Acerca del Proyecto</h2>
-            
-            <h3>Descripción del Problema</h3>
-            
-<p>El proyecto surge de un problema o necesidad identificada en nuestro entorno cercano, tanto institucional como comunitario. En Paraguay el guaraní es uno de los dos idiomas oficiales y forma parte de nuestra identidad cultural. Sin embargo, detectamos que muchas personas jóvenes, niños e incluso adultos tienen dificultades para hablarlo correctamente, entienden poco, o sienten vergüenza al usarlo. Esto se debe en gran parte a la falta de materiales modernos, accesibles y prácticos que se adapten a la forma en que hoy aprendemos: desde el celular y en ratos cortos.
-</p>
-            
-            <h3>Propuesta Educativa y Visión</h3>
-            <p>VILI busca revitalizar la enseñanza del guaraní integrando metodologías dinámicas y recursos multimedia interactivos que faciliten la comprensión auditiva y oral en entornos digitales de aprendizaje.</p>
+        <div class="stat-card">
+          <span class="stat-number">55.5%</span>
+          <span class="stat-label">Aceptación y Descarga</span>
+          <p class="stat-detail">
+            El <strong>55.5%</strong> de los encuestados afirmó que es "Probable" (44.4%) o "Muy probable" (11.1%) que descargue y utilice una aplicación móvil enfocada en la enseñanza del guaraní.
+          </p>
+        </div>
 
-            <h3>Objetivo General</h3
-            <p>"El objetivo que queremos para este proyecto es hacer que los jóvenes y adultos, niños puedan aprender mejor el idioma y hacer crecer más este legado que tenemos”</p>
-        </section>
+        <div class="stat-card">
+          <span class="stat-number">44.4%</span>
+          <span class="stat-label">Preferencia por Gamificación</span>
+          <p class="stat-detail">
+            El <strong>44.4%</strong> indicó que los métodos que más les motivarían son los juegos, puntos, rachas y niveles, mientras que el <strong>33.3%</strong> valora la inclusión de mitos, leyendas y música.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- 3. Sección Viabilidad -->
-        <section id="viabilidad" class="card">
-            <h2>Estudio de Viabilidad</h2>
-            <div class="viabilidad-grid">
-                <div class="v-item">
-                    <h3>Viabilidad Técnica</h3>
-                    <p>Uso de equipamiento disponible en los laboratorios institucionales y herramientas de código abierto. Desarrollo progresivo de competencias durante los 3 años.</p>
-                </div>
-                <div class="v-item">
-                    <h3>Viabilidad Legal</h3>
-                    <p>Uso de software bajo licencias libres (Open Source) y recursos educativos con licencias Creative Commons. Cumplimiento de políticas de privacidad sin recolección de datos sensibles.</p>
-                </div>
-                <div class="v-item">
-                    <h3>Viabilidad Económica</h3>
-                    <p>Costo operativo directo nulo en la etapa inicial. Alojamiento web gratuito mediante GitHub Pages y herramientas de desarrollo sin costo de licenciamiento.</p>
-                </div>
-            </div>
-        </section>
+  <!-- Sección Objetivos -->
+  <section id="objetivos" class="section">
+    <div class="container">
+     
+      <div class="card mb-4">
+        <h3>Objetivo General</h3>
+        <p>
+          Desarrollar una aplicación móvil interactiva que facilite el aprendizaje del idioma guaraní en jóvenes y adultos mediante lecciones dinámicas, audio nativo y gamificación.
+        </p>
+      </div>
 
-        <!-- 4. Sección Bitácora de Avances -->
-        <section id="bitacora" class="card">
-            <h2>Bitácora de Avances</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <span class="fecha">Fase 1 - Año 1 (2026)</span>
-                    <h3>Anteproyecto y Maquetación Web</h3>
-                    <p>Definición del marco teórico, estudio de viabilidad, estructuración de roles y maquetación del sitio público de seguimiento en HTML/CSS.</p>
-                </div>
-                <div class="timeline-item">
-                    <span class="fecha">Fase 2 - Año 2</span>
-                    <h3>Programación del Núcleo</h3>
-                    <p>Desarrollo de módulos de vocabulario, lecciones iniciales e integración de archivos de audio interactivos.</p>
-                </div>
-                <div class="timeline-item">
-                    <span class="fecha">Fase 3 - Año 3</span>
-                    <h3>Gamificación y Evaluación Final</h3>
-                    <p>Incorporación de dinámicas de progreso, pruebas con la comunidad educativa y presentación final del proyecto.</p>
-                </div>
-            </div>
-        </section>
+  <!-- Sección Viabilidad del Proyecto -->
+  <section id="viabilidad" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">Viabilidad del Proyecto</h2>
+      <p class="section-desc">
+        Para demostrar que el proyecto VILI es factible y puede llevarse a cabo con éxito, se analizaron tres dimensiones clave:
+      </p>
 
-        <!-- 5. Sección Equipo -->
-        <section id="equipo" class="card">
-            <h2>Equipo de Trabajo</h2>
-            <div class="equipo-grid">
-                <div class="miembro">
-                    <h3>Victoria Daniela Diaz Delgadillo</h3>
-                    <p class="rol">Desarrollador Backend<p/>
-                    <p>Trabaja en la parte del servidor del sitio web, ocupándose de la lógica, la base de datos y la integración de las aplicaciones. Utiliza lenguajes como PHP, Ruby, Python y Java.<p/>
-                    <p class="contacto">Correo: delgadillov766@gmail.com</p>
-                </div>
-                <div class="miembro">
-                    <h3>Liliana Raquel Ledesma Ortiz</h3>
-                    <p class="rol">Desarrollador Full Stack</p>
-                     <p> Combina las habilidades del frontend y del backend, permitiendo trabajar en todas las capas de una aplicación web. <p/>
-                    <p class="contacto">Correo: Liliana.ledesma.py@gmail.com</p>
-                </div>
-                <div class="miembro">
-                    <h3>Iara Belén Cubilla Delgado</h3>
-                    <p class="rol">Desarrollador Frontend:</p>
-                    <p> Se encarga del diseño y la implementación de la interfaz visual del sitio web, utilizando lenguajes como HTML, CSS y JavaScript. <p/>
+      <div class="grid-3">
+        <!-- Viabilidad Técnica -->
+        <div class="card">
+          <h3>Viabilidad Técnica</h3>
+          <p>
+          Uso de equipamiento disponible en los laboratorios institucionales y herramientas de código abierto. Desarrollo progresivo de competencias durante los 3 años          </p>
+        </div>
 
-                    <p class="contacto">Correo: iara.cubilla.py@gmail.com
-                 </p>
-                </div>
-            </div>
-        </section>
-    </main>
+        <!-- Viabilidad Legal -->
+        <div class="card">
+          <h3>Viabilidad Legal</h3>
+          <p>
+          Uso de software bajo licencias libres (Open Source) y recursos educativos con licencias Creative Commons. Cumplimiento de políticas de privacidad sin recolección de datos sensibles.          </p>
+        </div>
 
-    <!-- Pie de página -->
-    <footer>
-        <p>&copy; 2026 Proyecto VILI - Promoción 1°BATIN | Contacto Institucional</p>
-    </footer>
+        <!-- Viabilidad Económica -->
+        <div class="card">
+          <h3>Viabilidad Económica</h3>
+          <p>
+            Costo operativo directo nulo en la etapa inicial. Alojamiento web gratuito mediante GitHub Pages y herramientas de desarrollo sin costo de licenciamiento.          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Sección Bitácora -->
+  <section id="bitacora" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">Bitácora de Avances de la Etapa 1</h2>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">02 de Septiembre de 2026</div>
+          <div class="timeline-content">
+            <h4>Concepción de la Idea</h4>
+            <p>Definición del proyecto VILI y selección del enfoque de aprendizaje interactivo para el guaraní.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">15 de Septiembre de 2026</div>
+          <div class="timeline-content">
+            <h4>Estructuración Pedagógica</h4>
+            <p>Diseño preliminar del plan de lecciones y categorización de módulos por niveles de dificultad.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">27 de Octubre de 2026</div>
+          <div class="timeline-content">
+            <h4>Aplicación de la Encuesta de Campo</h4>
+            <p>Lanzamiento del formulario digital de diagnóstico y recopilación de los datos de la muestra inicial de 30 encuestados sobre dificultades y preferencias de uso.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">28 de Octubre de 2026</div>
+          <div class="timeline-content">
+            <h4>Actualización del Sitio Web de Seguimiento</h4>
+            <p>Corrección de observaciones docentes: Evidencia con encuestas, definición del significado de VILI y actualización de bitácora.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Sección Equipo -->
+  <section id="equipo" class="section">
+    <div class="container">
+      <h2 class="section-title">Equipo de Trabajo (Etapa 1 - 1ro BATIN)</h2>
+      <p class="section-desc">Descripción de los roles reales y tareas desempeñadas por las integrantes durante la Etapa 1:</p>
+
+      <div class="grid-3">
+        <div class="card card-team">
+          <div class="avatar">DF</div>
+         <h3>Liliana Raquel Ledesma Ortiz </h3>
+          <h3>Desarrolladora Frontend / Maquetadora Web</h3>
+          <p class="role-desc">
+            Encargada del maquetado estructural en HTML5, la definición del estilo visual con CSS3 y la adaptabilidad responsable del sitio web de seguimiento.
+          </p>
+        </div>
+
+        <div class="card card-team">
+          <div class="avatar">AR</div>
+         <h3>Victoria Daniela Dias Delgadillo </h3>
+          <h3>Analista de Requisitos y Documentación</h3>
+          <p class="role-desc">
+            Responsable del diseño de la encuesta de campo en Google Forms, el procesamiento estadístico de respuestas y la redacción del anteproyecto.
+          </p>
+        </div>
+
+        <div class="card card-team">
+          <div class="avatar">DC</div>
+          <h3>Iara Belén Cubilla Delgado </h3>
+          <h3>Desarrolladora de Contenidos</h3>
+          <p class="role-desc">
+            Encargada de la recopilación, revisión gramatical y estructuración pedagógica del banco de vocabulario y audios de guaraní.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Pie de Página -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p><strong>VILI - Viaje Interactivo al Lenguaje Idiomático </strong> © 2026</p>
+      <p>Proyecto del Bachillerato Técnico en Informática (1ro BATIN)</p>
+      
 </body>
 </html>
+

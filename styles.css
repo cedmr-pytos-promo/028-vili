@@ -1,130 +1,331 @@
-/* Estilos Base y Tipografía */
+/* Variables de Colores (Verde Oscuro y Gris Plata - Sin Amarillo) */
+:root {
+  --primary-color: #0f382c;      /* Verde bosque profundo */
+  --primary-light: #185241;
+  --accent-color: #dcdfdc;       /* Gris plata suave */
+  --accent-hover: #ffffff;
+  --text-dark: #222222;
+  --text-muted: #555555;
+  --bg-light: #f4f7f5;
+  --white: #ffffff;
+  --border-color: #d4ded8;
+  --radius: 8px;
+  --shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f4f1;
-    color: #2b2b2b;
-    line-height: 1.6;
+  font-family: 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif;
+  color: var(--text-dark);
+  line-height: 1.6;
+  background-color: #fafdfb;
 }
 
-header {
-    background-color: #1b4332;
-    color: white;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.logo-title {
-    font-size: 1.6rem;
-    font-weight: bold;
-    display: block;
-}
-
-.logo-sub {
-    font-size: 0.85rem;
-    color: #b7e4c7;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 15px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-/* Banner Principal */
+/* Header / Hero */
 .hero {
-    background-color: #2d6a4f;
-    color: white;
-    text-align: center;
-    padding: 2.5rem 1rem;
-}
-
-.eslogan {
-    font-style: italic;
-    font-size: 1.1rem;
-    color: #d8f3dc;
+  background: linear-gradient(135deg, var(--primary-color) 0%, #07221a 100%);
+  color: var(--white);
+  padding: 60px 20px;
+  text-align: center;
 }
 
 .badge {
-    background-color: #52b788;
-    color: #081c15;
-    padding: 6px 12px;
-    border-radius: 15px;
-    font-weight: bold;
-    font-size: 0.9rem;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
-/* Diseños de Secciones */
-main {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 0 15px;
+.logo {
+  font-size: 3.8rem;
+  color: #ffffff;
+  margin: 10px 0 5px;
+  letter-spacing: 3px;
 }
 
+.meaning {
+  font-size: 1.25rem;
+  color: #d1e7dd;
+  margin-bottom: 20px;
+}
+
+.meaning strong {
+  color: #ffffff;
+}
+
+.hero-desc {
+  max-width: 650px;
+  margin: 0 auto 30px;
+  font-size: 1.05rem;
+  color: #e0ece6;
+}
+
+.hero-btns {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* Botones */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #ffffff;
+  color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: #e2e8e4;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+/* Navegación */
+.navbar {
+  background-color: var(--primary-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+}
+
+.nav-brand {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+}
+
+.nav-links a {
+  color: #e0ece6;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+}
+
+/* Secciones */
+.section {
+  padding: 50px 0;
+}
+
+.bg-light {
+  background-color: var(--bg-light);
+}
+
+.section-title {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--primary-color);
+}
+
+.section-desc {
+  margin-bottom: 25px;
+  color: var(--text-muted);
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+/* Tarjetas */
 .card {
-    background: white;
-    padding: 25px;
-    margin-bottom: 25px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  background-color: var(--white);
+  border-radius: var(--radius);
+  padding: 22px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
 }
 
-.card h2 {
-    color: #1b4332;
-    border-bottom: 2px solid #d8f3dc;
-    padding-bottom: 8px;
-    margin-top: 0;
+.card-highlight {
+  border-left: 4px solid var(--primary-color);
 }
 
-/* Grillas para Viabilidad y Equipo */
-.viabilidad-grid, .equipo-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-    margin-top: 15px;
+.lead {
+  font-size: 1.1rem;
 }
 
-.v-item, .miembro {
-    background: #f8f9fa;
-    padding: 15px;
-    border-left: 4px solid #2d6a4f;
-    border-radius: 4px;
+/* Grilla Estadísticas de Encuesta */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-top: 20px;
 }
 
-.rol {
-    font-weight: bold;
-    color: #2d6a4f;
+.stat-card {
+  background-color: var(--white);
+  border-radius: var(--radius);
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  border-top: 4px solid var(--primary-color);
+  box-shadow: var(--shadow);
 }
 
-/* Línea de Tiempo para la Bitácora */
+.stat-number {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.stat-label {
+  font-weight: bold;
+  color: var(--primary-light);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.stat-detail {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+/* Layout Grillas */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 18px;
+}
+
+.card-team {
+  text-align: center;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+  font-weight: bold;
+}
+
+.role-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+
+/* Bitácora / Timeline */
+.timeline {
+  border-left: 3px solid var(--primary-color);
+  padding-left: 20px;
+  margin-left: 10px;
+}
+
 .timeline-item {
-    padding: 10px 0 10px 15px;
-    border-left: 3px solid #52b788;
-    margin-bottom: 15px;
+  margin-bottom: 25px;
+  position: relative;
 }
 
-.fecha {
-    font-size: 0.85rem;
-    color: #52b788;
-    font-weight: bold;
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -27px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  border: 2px solid #ffffff;
 }
 
-footer {
-    text-align: center;
-    padding: 15px;
-    background-color: #1b4332;
-    color: white;
-    font-size: 0.85rem;
+.timeline-date {
+  font-size: 0.85rem;
+  color: var(--primary-light);
+  font-weight: bold;
 }
+
+.timeline-content h4 {
+  color: var(--primary-color);
+  margin: 2px 0 5px;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--primary-color);
+  color: #d1e7dd;
+  padding: 30px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 3px solid var(--primary-light);
+}
+
+.contact-info a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
